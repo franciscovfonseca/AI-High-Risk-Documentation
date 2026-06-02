@@ -20,9 +20,7 @@ Dimensions: 1280x640px. No 3D, no gradients, no cartoon style.
 [![UK GDPR](https://img.shields.io/badge/UK%20GDPR-Article%2022-E65100?style=for-the-badge)](https://ico.org.uk/)
 [![Status](https://img.shields.io/badge/Status-Complete-brightgreen?style=for-the-badge)]()
 
-**Phase 5 of an end-to-end AI Governance Programme**
-
-[← Phase 1: AI System Inventory](https://github.com/franciscovfonseca/AI-System-Inventory) · [← Phase 2: AI Risk Assessment](https://github.com/franciscovfonseca/AI-Risk-Assessment) · [← Phase 3: Responsible AI Policy](https://github.com/franciscovfonseca/AI-Governance-Policy) · [← Phase 4: AI Incident Response](https://github.com/franciscovfonseca/AI-Incident-Response) · **Phase 5: High-Risk AI Documentation**
+**Phase 5 of an end-to-end AI Governance Programme: High-Risk AI Documentation**
 
 </div>
 
@@ -30,13 +28,20 @@ Dimensions: 1280x640px. No 3D, no gradients, no cartoon style.
 
 ## 📌 Executive Summary
 
-When the NP-001 Credit Scoring Engine was deployed in 2022, it had no structured technical documentation. No system description meeting EU AI Act Annex IV requirements. No documented risk management record. No data governance statement. No written human oversight procedure. When a bias incident was discovered four years later, the absence of this documentation was not the cause - but it was a symptom of the same governance gap that allowed the bias to go undetected.
+This is the final project of a complete end-to-end AI governance program for NorthPoint Financial Services, a UK firm running four AI systems in production. Each of the four earlier phases solved a different part of the puzzle:
 
-One of the corrective actions from the Phase 4 root cause analysis was explicit: produce Annex IV-compliant technical documentation for all HIGH RISK systems in the NorthPoint portfolio. Phase 5 delivers that requirement.
+- [Phase 1 - AI System Inventory](https://github.com/franciscovfonseca/AI-System-Inventory): AI System Inventory catalogued every AI system in the organisation and classified each one under the EU AI Act. Two came back HIGH RISK: the NP-001 Credit Scoring Engine and the NP-002 Fraud Detection System.
+- [Phase 2 - AI Risk Assessment](https://github.com/franciscovfonseca/AI-Risk-Assessment): AI Risk Assessment put those two systems through a full risk assessment. The most significant finding was that the Credit Scoring Engine had been using postcode as a proxy for ethnicity in 12 London districts, without anyone realising.
+- [Phase 3 - Responsible AI Policy](https://github.com/franciscovfonseca/AI-Governance-Policy): Responsible AI Policy and Governance Framework built the governance infrastructure around the systems: a Responsible AI policy, accountability roles from the board down to system owners and a controls plan with named fixes and deadlines.
+- [Phase 4 - AI Incident Response](https://github.com/franciscovfonseca/AI-Incident-Response): AI Incident Response was the test. A bias audit required by the Phase 3 framework confirmed the postcode issue in production. The firm had to contain the harm, notify the FCA and the ICO and remediate affected customers.
 
-This project produces structured technical documentation for both of NorthPoint's HIGH RISK AI systems - the NP-001 Credit Scoring Engine (redeployed June 2026 following Phase 4 remediation) and the NP-002 Fraud Detection System (under enhanced monitoring following the Phase 4 parallel review). Six documents cover the full Annex IV scope: system description and intended purpose, risk management, data governance, human oversight, logging and traceability and performance monitoring.
+What none of those phases produced was the one thing the EU AI Act explicitly demands for any HIGH RISK AI system: a structured technical documentation pack meeting the requirements of Annex IV.
 
-The result is a documentation pack that any regulator, auditor or governance reviewer can use to assess whether these systems are governed in compliance with the EU AI Act's operational lifecycle obligations.
+The Credit Scoring Engine had been running since 2022 without one. No formal system description, no risk management record, no data governance statement, no written human oversight procedure. The absence of this pack did not cause the Phase 4 bias incident, but it slowed the investigation badly. The team spent weeks reconstructing data and feature decisions that should have been written down from day one.
+
+Phase 5 produces that pack. Six documents covering both HIGH RISK systems - the redeployed Credit Scoring Engine (following Phase 4 remediation) and the Fraud Detection System (under enhanced monitoring after the Phase 4 parallel review). Together they span the full Annex IV scope: system description, risk management, data governance, human oversight, traceability and post-deployment monitoring.
+
+The result is a pack that any regulator, auditor or governance reviewer can pick up and use to answer the basic question the EU AI Act is built around: is this system actually being governed the way it should be?
 
 ---
 
