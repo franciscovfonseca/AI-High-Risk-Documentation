@@ -30,10 +30,10 @@ Dimensions: 1280x640px. No 3D, no gradients, no cartoon style.
 
 This is the final project of a complete end-to-end AI governance program for NorthPoint Financial Services, a UK firm running four AI systems in production. Each of the four earlier phases solved a different part of the puzzle:
 
-- [Phase 1 - AI System Inventory](https://github.com/franciscovfonseca/AI-System-Inventory): AI System Inventory catalogued every AI system in the organisation and classified each one under the EU AI Act. Two came back HIGH RISK: the NP-001 Credit Scoring Engine and the NP-002 Fraud Detection System.
-- [Phase 2 - AI Risk Assessment](https://github.com/franciscovfonseca/AI-Risk-Assessment): AI Risk Assessment put those two systems through a full risk assessment. The most significant finding was that the Credit Scoring Engine had been using postcode as a proxy for ethnicity in 12 London districts, without anyone realising.
-- [Phase 3 - Responsible AI Policy](https://github.com/franciscovfonseca/AI-Governance-Policy): Responsible AI Policy and Governance Framework built the governance infrastructure around the systems: a Responsible AI policy, accountability roles from the board down to system owners and a controls plan with named fixes and deadlines.
-- [Phase 4 - AI Incident Response](https://github.com/franciscovfonseca/AI-Incident-Response): AI Incident Response was the test. A bias audit required by the Phase 3 framework confirmed the postcode issue in production. The firm had to contain the harm, notify the FCA and the ICO and remediate affected customers.
+- [Phase 1 - AI System Inventory](https://github.com/franciscovfonseca/AI-System-Inventory) catalogued every AI system in the organisation and classified each one under the EU AI Act. Two came back HIGH RISK: the NP-001 Credit Scoring Engine and the NP-002 Fraud Detection System.
+- [Phase 2 - AI Risk Assessment](https://github.com/franciscovfonseca/AI-Risk-Assessment) put those two systems through a full risk assessment. The most significant finding was that the Credit Scoring Engine had been using postcode as a proxy for ethnicity in 12 London districts, without anyone realising.
+- [Phase 3 - Responsible AI Policy and Governance Framework](https://github.com/franciscovfonseca/AI-Governance-Policy) built the governance infrastructure around the systems: a Responsible AI policy, accountability roles from the board down to system owners and a controls plan with named fixes and deadlines.
+- [Phase 4 - AI Incident Response](https://github.com/franciscovfonseca/AI-Incident-Response) was the test. A bias audit required by the Phase 3 framework confirmed the postcode issue in production. The firm had to contain the harm, notify the FCA and the ICO and remediate affected customers.
 
 What none of those phases produced was the one thing the EU AI Act explicitly demands for any HIGH RISK AI system: a structured technical documentation pack meeting the requirements of Annex IV.
 
