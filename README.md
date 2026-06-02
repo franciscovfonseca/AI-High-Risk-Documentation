@@ -152,21 +152,7 @@ The Phase 4 incident demonstrated this directly. When the bias investigation beg
 
 The EU AI Act's documentation requirements exist because transparency and accountability are not possible without a record. The Annex IV pack produced in Phase 5 is that record.
 
----
 
-## 📁 Repository Structure
-
-```
-AI-High-Risk-Documentation/
-├── README.md
-└── docs/
-    ├── banner.png
-    ├── 01-system-description.md
-    ├── 02-risk-management.md
-    ├── 03-data-governance.md
-    ├── 04-human-oversight.md
-    ├── 05-logging-traceability.md
-    └── 06-performance-monitoring.md
 ```
 
 ---
