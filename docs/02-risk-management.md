@@ -1,9 +1,9 @@
 # Document 2: Risk Management Summary
 
-**Systems:** NP-001 Credit Scoring Engine · NP-002 Fraud Detection System
-**EU AI Act Reference:** Article 9 (Risk Management System)
-**Version:** 1.0 - July 2026
-**Prepared by:** AI Governance Programme Office
+**Systems:** NP-001 Credit Scoring Engine · NP-002 Fraud Detection System  
+**EU AI Act Reference:** Article 9 (Risk Management System)  
+**Version:** 1.0 - July 2026  
+**Prepared by:** AI Governance Programme Office  
 
 ---
 
