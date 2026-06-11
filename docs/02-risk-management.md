@@ -2,7 +2,7 @@
 
 **Systems:** NP-001 Credit Scoring Engine · NP-002 Fraud Detection System
 **EU AI Act Reference:** Article 9 (Risk Management System)
-**Version:** 1.0 — July 2026
+**Version:** 1.0 - July 2026
 **Prepared by:** AI Governance Programme Office
 
 ---
@@ -12,14 +12,14 @@
 Article 9 requires that high-risk AI systems be subject to a documented risk management system that is a continuous, iterative process throughout the system's entire lifecycle. This document records the risk management approach for both HIGH RISK systems in NorthPoint's AI portfolio.
 
 This document should be read alongside:
-- Phase 2 AI Risk Assessment — [franciscovfonseca/AI-Risk-Assessment](https://github.com/franciscovfonseca/AI-Risk-Assessment) — which provides the original likelihood/impact analysis for NP-001 and NP-002
-- Phase 4 AI Incident Response — [franciscovfonseca/AI-Incident-Response](https://github.com/franciscovfonseca/AI-Incident-Response) — which documents the realised bias incident in NP-001 and the corrective action plan
+- Phase 2 AI Risk Assessment - [franciscovfonseca/AI-Risk-Assessment](https://github.com/franciscovfonseca/AI-Risk-Assessment) - which provides the original likelihood/impact analysis for NP-001 and NP-002
+- Phase 4 AI Incident Response - [franciscovfonseca/AI-Incident-Response](https://github.com/franciscovfonseca/AI-Incident-Response) - which documents the realised bias incident in NP-001 and the corrective action plan
 
 ---
 
-## 2. NP-001 — Credit Scoring Engine Risk Register
+## 2. NP-001 - Credit Scoring Engine Risk Register
 
-### R1 — Discriminatory Credit Scoring Outcomes
+### R1 - Discriminatory Credit Scoring Outcomes
 
 **Description:** The model produces scores that systematically disadvantage applicants from protected groups due to proxy discrimination, training data bias or feature encoding.
 
@@ -38,11 +38,11 @@ This document should be read alongside:
 - Underwriter override mechanism and customer challenge right (see Document 4)
 - Corrective action plan from Phase 4 embedded in governance programme
 
-**Residual risk:** Medium — bias risk is reduced but not fully eliminated by one remediation. Ongoing monitoring is the primary control.
+**Residual risk:** Medium - bias risk is reduced but not fully eliminated by one remediation. Ongoing monitoring is the primary control.
 
 ---
 
-### R2 — Over-reliance by Loan Underwriters
+### R2 - Over-reliance by Loan Underwriters
 
 **Description:** Underwriters defer to NP-001 output without exercising genuine independent judgment, making the model's recommendation the de facto decision.
 
@@ -55,14 +55,14 @@ This document should be read alongside:
 **Controls:**
 - Mandatory oversight training before system access is granted
 - Feature contribution summary requires active review before a decision can be recorded
-- Override rate monitoring — low override rates trigger coaching review
+- Override rate monitoring - low override rates trigger coaching review
 - Underwriter cannot submit a decision until the review step is completed in the system
 
 **Residual risk:** Low
 
 ---
 
-### R3 — Model Drift
+### R3 - Model Drift
 
 **Description:** Predictive accuracy degrades as the applicant population, macroeconomic conditions or NorthPoint's lending criteria change over time.
 
@@ -81,7 +81,7 @@ This document should be read alongside:
 
 ---
 
-### R4 — Explainability Failure
+### R4 - Explainability Failure
 
 **Description:** Applicants who receive a decline decision cannot understand the basis for the decision or exercise their right to human review, creating legal exposure under UK GDPR Article 22 and FCA Consumer Duty.
 
@@ -100,9 +100,9 @@ This document should be read alongside:
 
 ---
 
-## 3. NP-002 — Fraud Detection System Risk Register
+## 3. NP-002 - Fraud Detection System Risk Register
 
-### R1 — High False Positive Rate Causing Customer Harm
+### R1 - High False Positive Rate Causing Customer Harm
 
 **Description:** Legitimate transactions are incorrectly held, preventing customers from accessing their funds and causing financial harm and loss of trust.
 
@@ -123,15 +123,15 @@ This document should be read alongside:
 
 ---
 
-### R2 — Demographic Disparity in Hold Rates
+### R2 - Demographic Disparity in Hold Rates
 
-**Description:** The model flags transactions from certain customer demographic groups at higher rates, causing disproportionate disruption to specific customer segments — the same category of risk that materialised in NP-001.
+**Description:** The model flags transactions from certain customer demographic groups at higher rates, causing disproportionate disruption to specific customer segments - the same category of risk that materialised in NP-001.
 
 **Status:** This risk was flagged in Phase 4. A parallel bias review of NP-002 was initiated in March 2026 and is ongoing. Target completion: Q4 2026.
 
 | | |
 |---|---|
-| **Likelihood** | Medium (postcode is used as a geographic feature — same risk category as the NP-001 feature that caused the Phase 4 incident) |
+| **Likelihood** | Medium (postcode is used as a geographic feature - same risk category as the NP-001 feature that caused the Phase 4 incident) |
 | **Impact** | High |
 | **Risk level** | High |
 
@@ -140,11 +140,11 @@ This document should be read alongside:
 - Enhanced monitoring of hold rates by demographic proxy implemented pending review completion
 - If review identifies a disparity above threshold, containment and remediation will follow the Phase 4 incident response model
 
-**Residual risk:** High — pending completion of bias review. This is the primary open risk in the NorthPoint AI portfolio.
+**Residual risk:** High - pending completion of bias review. This is the primary open risk in the NorthPoint AI portfolio.
 
 ---
 
-### R3 — Novel Fraud Pattern Evasion
+### R3 - Novel Fraud Pattern Evasion
 
 **Description:** The model fails to detect genuinely novel fraud techniques until a retraining cycle captures them, leaving a detection gap.
 
@@ -159,11 +159,11 @@ This document should be read alongside:
 - Retraining triggered by emerging pattern detection
 - Fraud analyst investigation supplements model output for complex and unusual cases
 
-**Residual risk:** Medium — inherent in the nature of adversarial fraud; managed through continuous monitoring.
+**Residual risk:** Medium - inherent in the nature of adversarial fraud; managed through continuous monitoring.
 
 ---
 
-### R4 — System Unavailability During Peak Periods
+### R4 - System Unavailability During Peak Periods
 
 **Description:** Model or infrastructure failure during high-volume transaction periods creates fraud detection gaps.
 
@@ -184,25 +184,25 @@ This document should be read alongside:
 
 ## 4. Pre-Deployment Evaluation Status
 
-### NP-001 v2.0 — Redeployment (June 2026)
+### NP-001 v2.0 - Redeployment (June 2026)
 
 | Evaluation | Owner | Status |
 |---|---|---|
 | Independent fairness audit (post-remediation) | External evaluator | Complete ✓ |
 | Proxy analysis of all remaining features | ML Engineering and AGPO | Complete ✓ |
 | Performance validation vs. v1.0 baseline | ML Engineering | Complete ✓ |
-| Legal review — UK Equality Act and FCA Consumer Duty | Legal | Complete ✓ |
+| Legal review - UK Equality Act and FCA Consumer Duty | Legal | Complete ✓ |
 | AGPO sign-off | AGPO | Complete ✓ |
 | AI Governance Committee approval for redeployment | AGC | Complete ✓ |
 
-### NP-002 v1.4 — Current Deployment
+### NP-002 v1.4 - Current Deployment
 
 | Evaluation | Owner | Status |
 |---|---|---|
 | Performance validation | ML Engineering | Complete ✓ |
 | False positive SLA confirmation | Head of Financial Crime | Complete ✓ |
-| Annex IV documentation completion | AGPO | Complete — this document ✓ |
-| Bias review (geographic features) | AGPO and ML Engineering | In progress — Q4 2026 |
+| Annex IV documentation completion | AGPO | Complete - this document ✓ |
+| Bias review (geographic features) | AGPO and ML Engineering | In progress - Q4 2026 |
 
 ---
 
