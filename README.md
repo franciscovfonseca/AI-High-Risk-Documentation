@@ -39,7 +39,7 @@ What none of those phases produced was the one thing the EU AI Act explicitly de
 
 The Credit Scoring Engine had been running since 2022 without one. No formal system description, no risk management record, no data governance statement, no written human oversight procedure. The absence of this pack did not cause the Phase 4 bias incident, but it slowed the investigation badly. The team spent weeks reconstructing data and feature decisions that should have been written down from day one.
 
-Phase 5 produces that pack. Six documents covering both HIGH RISK systems - the redeployed Credit Scoring Engine (following Phase 4 remediation) and the Fraud Detection System (under enhanced monitoring after the Phase 4 parallel review). Together they span the full Annex IV scope: system description, risk management, data governance, human oversight, traceability and post-deployment monitoring.
+This Phase 5 of the AI Governance PrograM produces that pack. Six documents covering both HIGH RISK systems - the redeployed Credit Scoring Engine (following Phase 4 remediation) and the Fraud Detection System (under enhanced monitoring after the Phase 4 parallel review). Together they span the full Annex IV scope: system description, risk management, data governance, human oversight, traceability and post-deployment monitoring.
 
 The result is a pack that any regulator, auditor or governance reviewer can pick up and use to answer the basic question the EU AI Act is built around: is this system actually being governed the way it should be?
 
@@ -156,9 +156,6 @@ Without documentation:
 The Phase 4 incident demonstrated this directly. When the bias investigation began, the investigation team had to reconstruct data decisions and feature choices that had never been formally documented. That reconstruction took weeks. A compliant documentation pack would have made the investigation faster and the regulatory response more credible.
 
 The EU AI Act's documentation requirements exist because transparency and accountability are not possible without a record. The Annex IV pack produced in Phase 5 is that record.
-
-
-```
 
 ---
 
