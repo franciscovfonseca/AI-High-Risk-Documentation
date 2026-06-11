@@ -1,10 +1,10 @@
 # Document 1: System Description and Intended Purpose
 
-**Systems:** NP-001 Credit Scoring Engine · NP-002 Fraud Detection System
-**Provider and Deployer:** NorthPoint Financial Services (internally developed and operated)
-**EU AI Act Reference:** Article 11 · Annex IV §1 and §2
-**Version:** 1.0 — July 2026
-**Prepared by:** AI Governance Programme Office and ML Engineering
+**Systems:** NP-001 Credit Scoring Engine · NP-002 Fraud Detection System  
+**Provider and Deployer:** NorthPoint Financial Services (internally developed and operated)  
+**EU AI Act Reference:** Article 11 · Annex IV §1 and §2  
+**Version:** 1.0 - July 2026  
+**Prepared by:** AI Governance Programme Office and ML Engineering  
 
 ---
 
@@ -14,7 +14,7 @@ NorthPoint Financial Services is both the developer and the operator of NP-001 a
 
 ---
 
-## NP-001 — Credit Scoring Engine
+## NP-001 - Credit Scoring Engine
 
 ### 1. System Identification
 
@@ -25,10 +25,10 @@ NorthPoint Financial Services is both the developer and the operator of NP-001 a
 | Version documented | v2.0 |
 | Developer | NorthPoint ML Engineering |
 | Operator | NorthPoint Financial Services (Credit Risk division) |
-| Deployment context | Personal loan origination — all retail and digital channels |
-| EU AI Act classification | HIGH RISK — Annex III §5(b) |
+| Deployment context | Personal loan origination - all retail and digital channels |
+| EU AI Act classification | HIGH RISK - Annex III §5(b) |
 | Original deployment | March 2022 (v1.0) |
-| Current version deployed | June 2026 (v2.0 — post-incident remediation) |
+| Current version deployed | June 2026 (v2.0 - post-incident remediation) |
 
 > **Version context:** v2.0 is the retrained model deployed following the NP-INC-2026-001 bias incident documented in Phase 4. The postcode geographic feature was removed, the model was retrained on data from 2015-2024 and independently validated before redeployment in June 2026. This documentation covers v2.0 only. v1.0 is decommissioned and must not be used for active lending decisions.
 
@@ -51,10 +51,10 @@ NP-001's output informs, but does not autonomously determine, credit decisions. 
 
 **Intended users:** Trained loan underwriters in NorthPoint's Credit Risk division.
 
-**Intended context of use:** All personal loan applications submitted through NorthPoint's retail and digital channels in the UK. The system is not intended for, and must not be used for, business lending, mortgage assessment, internal employee credit products or any application category outside the standard personal loan origination process.
+**Intended context of use:** All personal loan applications submitted through NorthPoint's retail and digital channels in the UK. The system is not intended for and must not be used for, business lending, mortgage assessment, internal employee credit products or any application category outside the standard personal loan origination process.
 
 **How outputs are intended to be used:**
-- Credit score and risk tier are structured inputs for the underwriter — not autonomous decisions
+- Credit score and risk tier are structured inputs for the underwriter - not autonomous decisions
 - Underwriters are required to review the feature contribution summary and exercise independent judgment
 - Decline decisions based solely on NP-001 output without underwriter review are prohibited
 
@@ -78,7 +78,7 @@ NP-001's output informs, but does not autonomously determine, credit decisions. 
 ### 6. EU AI Act Classification
 
 **Classification:** HIGH RISK
-**Legal basis:** EU AI Act Annex III §5(b) — AI systems used in financial services that determine or materially influence access to credit.
+**Legal basis:** EU AI Act Annex III §5(b) - AI systems used in financial services that determine or materially influence access to credit.
 
 NP-001 directly informs whether individuals are granted or denied access to personal credit. The consequential nature of the decisions it informs and the regulatory context of financial services lending make this classification clear and non-controversial.
 
@@ -86,7 +86,7 @@ NP-001 directly informs whether individuals are granted or denied access to pers
 
 ---
 
-## NP-002 — Fraud Detection System
+## NP-002 - Fraud Detection System
 
 ### 1. System Identification
 
@@ -97,8 +97,8 @@ NP-001 directly informs whether individuals are granted or denied access to pers
 | Version documented | v1.4 |
 | Developer | NorthPoint ML Engineering |
 | Operator | NorthPoint Financial Services (Financial Crime division) |
-| Deployment context | Real-time transaction monitoring — all retail and digital transaction channels |
-| EU AI Act classification | HIGH RISK — Annex III §5(b) |
+| Deployment context | Real-time transaction monitoring - all retail and digital transaction channels |
+| EU AI Act classification | HIGH RISK - Annex III §5(b) |
 | Original deployment | September 2021 (v1.0) |
 | Current version deployed | November 2024 (v1.4) |
 
@@ -141,12 +141,12 @@ For transactions flagged at or above the automated hold threshold (score ≥ 85)
 | False positive rate | The model generates false positives at approximately 0.4% of flagged transactions at the current threshold. | Fraud analysts review all holds within 4 business hours. False positive SLA: < 0.5%. |
 | Novel fraud patterns | The model is trained on historical patterns. Genuinely novel techniques may evade detection until retraining. | Monthly fraud intelligence review. Retraining triggered by emerging pattern detection. |
 | Transaction context limitations | NP-002 assesses individual transactions and has limited visibility of cross-account or cross-customer patterns. | Fraud analysts supplement NP-002 output with broader investigation tools for complex cases. |
-| Demographic disparity risk | NP-002 uses postcode as a geographic risk variable — the same category of feature that produced bias in NP-001. A bias review was initiated in March 2026 following the Phase 4 parallel review trigger. | Enhanced monitoring of hold rates by demographic proxy. Full bias review target: Q4 2026. |
+| Demographic disparity risk | NP-002 uses postcode as a geographic risk variable - the same category of feature that produced bias in NP-001. A bias review was initiated in March 2026 following the Phase 4 parallel review trigger. | Enhanced monitoring of hold rates by demographic proxy. Full bias review target: Q4 2026. |
 
 ### 6. EU AI Act Classification
 
 **Classification:** HIGH RISK
-**Legal basis:** EU AI Act Annex III §5(b) — AI systems used in financial services that determine or materially influence access to financial resources.
+**Legal basis:** EU AI Act Annex III §5(b) - AI systems used in financial services that determine or materially influence access to financial resources.
 
 NP-002 places automatic holds on customer transactions and funds. The material impact on customers' ability to access their money and the financial services context make this classification clear.
 
@@ -154,4 +154,4 @@ NP-002 places automatic holds on customer transactions and funds. The material i
 
 ---
 
-*Prepared by the AI Governance Programme Office — July 2026. This document forms part of the Annex IV technical documentation pack for NP-001 and NP-002. Distribution: AI Governance Committee · FCA (on request) · ICO (on request) · Internal Audit.*
+*Prepared by the AI Governance Programme Office - July 2026. This document forms part of the Annex IV technical documentation pack for NP-001 and NP-002. Distribution: AI Governance Committee · FCA (on request) · ICO (on request) · Internal Audit.*
