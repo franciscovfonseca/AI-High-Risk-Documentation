@@ -1,15 +1,15 @@
 # Document 4: Human Oversight Mechanisms
 
-**Systems:** NP-001 Credit Scoring Engine · NP-002 Fraud Detection System
-**EU AI Act Reference:** Article 14 (Human Oversight)
-**Version:** 1.0 — July 2026
-**Prepared by:** AI Governance Programme Office
+**Systems:** NP-001 Credit Scoring Engine · NP-002 Fraud Detection System  
+**EU AI Act Reference:** Article 14 (Human Oversight)  
+**Version:** 1.0 - July 2026  
+**Prepared by:** AI Governance Programme Office  
 
 ---
 
 ## 1. Purpose
 
-Article 14 requires that high-risk AI systems be designed to enable effective human oversight — allowing humans to understand the system's capabilities and limitations, monitor its operation, detect failures or harmful outputs, intervene and override and decide not to use the AI output in a specific case.
+Article 14 requires that high-risk AI systems be designed to enable effective human oversight - allowing humans to understand the system's capabilities and limitations, monitor its operation, detect failures or harmful outputs, intervene and override and decide not to use the AI output in a specific case.
 
 This document describes how NorthPoint implements these requirements for both NP-001 and NP-002.
 
@@ -23,14 +23,14 @@ NorthPoint's human oversight model for both systems is built on three principles
 No credit decision or permanent account action may result from AI output alone. A qualified human must review the AI output and make an active, documented decision.
 
 **2. Override is expected, not exceptional.**
-Overriding an AI recommendation is the normal exercise of professional judgment. Systems, training and culture must make override feel routine and supported — not a challenge to the model's authority.
+Overriding an AI recommendation is the normal exercise of professional judgment. Systems, training and culture must make override feel routine and supported - not a challenge to the model's authority.
 
 **3. Oversight must be auditable.**
 Every review, every override and every decision must be logged. Oversight that cannot be demonstrated has not occurred.
 
 ---
 
-## 3. NP-001 — Loan Underwriter Oversight
+## 3. NP-001 - Loan Underwriter Oversight
 
 ### 3.1 Oversight Roles
 
@@ -75,9 +75,9 @@ Every review, every override and every decision must be logged. Oversight that c
 
 | Feature | Purpose |
 |---|---|
-| Feature contribution summary | Enables underwriters to understand why the AI produced the score it did — and to identify where they disagree |
+| Feature contribution summary | Enables underwriters to understand why the AI produced the score it did - and to identify where they disagree |
 | Full application display alongside AI output | Underwriters see the complete application, not just the AI's summary |
-| Active confirmation required | System requires underwriters to click "Confirm decision" — no passive acceptance of AI output |
+| Active confirmation required | System requires underwriters to click "Confirm decision" - no passive acceptance of AI output |
 | Override logging | All divergences from AI recommendations are automatically logged with timestamp and reviewer ID |
 | Low-confidence flag | Where the model's confidence is low for a specific application, this is flagged to the underwriter |
 
@@ -91,7 +91,7 @@ Every review, every override and every decision must be logged. Oversight that c
 
 ---
 
-## 4. NP-002 — Fraud Analyst Oversight
+## 4. NP-002 - Fraud Analyst Oversight
 
 ### 4.1 Oversight Roles
 
@@ -141,8 +141,8 @@ Customers who believe a hold was incorrectly applied may contact NorthPoint's Fi
 | Feature | Purpose |
 |---|---|
 | Reason code per flagged transaction | Directs analyst attention to the specific fraud signal(s) the model identified |
-| Full transaction context display | Analysts see the complete transaction history alongside the AI flag — not just the flagged transaction |
-| Hold timer | Visual indicator showing time elapsed since hold was applied — supports SLA compliance |
+| Full transaction context display | Analysts see the complete transaction history alongside the AI flag - not just the flagged transaction |
+| Hold timer | Visual indicator showing time elapsed since hold was applied - supports SLA compliance |
 | Override logging | All analyst decisions (confirm/clear) automatically logged with timestamp and analyst ID |
 | Demographic hold rate dashboard | Available to Head of Financial Crime for quarterly demographic parity review |
 
@@ -168,13 +168,13 @@ Customers who believe a hold was incorrectly applied may contact NorthPoint's Fi
 
 Training covers: how the AI system works and what it does not do; the user's role as an overseer and what meaningful oversight looks like; when and how to override; how to handle customer challenges; and escalation paths.
 
-Training completion is tracked in NorthPoint's LMS. Active system access is suspended for any user whose training certification has lapsed. This is a hard technical control — lapsed users cannot access either system until recertification is complete.
+Training completion is tracked in NorthPoint's LMS. Active system access is suspended for any user whose training certification has lapsed. This is a hard technical control - lapsed users cannot access either system until recertification is complete.
 
 ---
 
 ## 6. Governance Oversight
 
-The Head of Credit Risk (NP-001) and Head of Financial Crime (NP-002) are responsible for oversight quality at the divisional level. The AI Governance Programme Office reviews aggregate oversight metrics quarterly and reports to the AI Governance Committee. Systemic oversight quality failures — low override rates, low review time, high challenge rates — are treated as potential AI incidents and escalated accordingly.
+The Head of Credit Risk (NP-001) and Head of Financial Crime (NP-002) are responsible for oversight quality at the divisional level. The AI Governance Programme Office reviews aggregate oversight metrics quarterly and reports to the AI Governance Committee. Systemic oversight quality failures - low override rates, low review time, high challenge rates - are treated as potential AI incidents and escalated accordingly.
 
 ---
 
