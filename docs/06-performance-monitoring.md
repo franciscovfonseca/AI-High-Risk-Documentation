@@ -1,9 +1,9 @@
 # Document 6: Performance Monitoring Plan
 
-**Systems:** NP-001 Credit Scoring Engine · NP-002 Fraud Detection System
-**EU AI Act Reference:** Article 15 (Accuracy, Robustness, Cybersecurity) · Article 17 (Post-Market Monitoring)
-**Version:** 1.0 — July 2026
-**Prepared by:** AI Governance Programme Office
+**Systems:** NP-001 Credit Scoring Engine · NP-002 Fraud Detection System  
+**EU AI Act Reference:** Article 15 (Accuracy, Robustness, Cybersecurity) · Article 17 (Post-Market Monitoring)  
+**Version:** 1.0 - July 2026  
+**Prepared by:** AI Governance Programme Office  
 
 ---
 
@@ -19,16 +19,16 @@ This document defines NorthPoint's monitoring plan for NP-001 and NP-002.
 
 Post-deployment monitoring serves four objectives for both systems:
 
-1. **Performance validation** — confirm each system continues to perform at or above accepted standards
-2. **Fairness assurance** — detect emerging bias or disparate impact across customer groups before harm accumulates
-3. **Oversight quality** — verify that human oversight is functioning as designed and not becoming nominal
-4. **Drift detection** — identify when the customer population, market conditions or fraud patterns have shifted sufficiently that a system may need revalidation
+1. **Performance validation** - confirm each system continues to perform at or above accepted standards
+2. **Fairness assurance** - detect emerging bias or disparate impact across customer groups before harm accumulates
+3. **Oversight quality** - verify that human oversight is functioning as designed and not becoming nominal
+4. **Drift detection** - identify when the customer population, market conditions or fraud patterns have shifted sufficiently that a system may need revalidation
 
-> **Monitoring philosophy:** The Phase 4 incident demonstrated that a model can be monitored for accuracy for four years while producing discriminatory outcomes that are invisible to accuracy metrics alone. This monitoring plan is designed to prevent that failure from recurring. Fairness metrics are treated as first-class monitoring obligations — not optional additions to performance tracking.
+> **Monitoring philosophy:** The Phase 4 incident demonstrated that a model can be monitored for accuracy for four years while producing discriminatory outcomes that are invisible to accuracy metrics alone. This monitoring plan is designed to prevent that failure from recurring. Fairness metrics are treated as first-class monitoring obligations - not optional additions to performance tracking.
 
 ---
 
-## 3. NP-001 — Credit Scoring Engine Monitoring
+## 3. NP-001 - Credit Scoring Engine Monitoring
 
 ### 3.1 Model Performance Metrics
 
@@ -55,12 +55,12 @@ Post-deployment monitoring serves four objectives for both systems:
 | Gini coefficient < 0.40 | Immediate revalidation review; possible suspension pending outcome |
 | Demographic parity ratio < 0.80 for any measurable group | Escalation to AGPO; bias investigation initiated following Phase 4 incident response model |
 | Annual proxy analysis identifies Cramér's V > 0.30 for any feature | Feature review; possible removal before next quarterly monitoring cycle |
-| Macroeconomic shock — significant change in unemployment or credit conditions | Off-cycle revalidation |
+| Macroeconomic shock - significant change in unemployment or credit conditions | Off-cycle revalidation |
 | 24 months since last full revalidation | Scheduled revalidation |
 
 ---
 
-## 4. NP-002 — Fraud Detection System Monitoring
+## 4. NP-002 - Fraud Detection System Monitoring
 
 ### 4.1 Model Performance Metrics
 
@@ -77,7 +77,7 @@ Post-deployment monitoring serves four objectives for both systems:
 |---|---|---|---|---|
 | **Hold rate by demographic proxy** | Rate of holds applied across geographic and demographic proxy groups | No statistically significant disparity | Quarterly | Significant disparity triggers bias investigation |
 | **Demographic parity ratio (hold rates)** | Hold rate for flagged groups vs. overall customer population | ≥ 0.80 | Quarterly | < 0.80 triggers immediate AGPO escalation |
-| **Bias review completion** | Formal bias assessment of NP-002 geographic features | Complete — Q4 2026 | One-time (then annual) | Overdue triggers escalation to AI Governance Committee |
+| **Bias review completion** | Formal bias assessment of NP-002 geographic features | Complete - Q4 2026 | One-time (then annual) | Overdue triggers escalation to AI Governance Committee |
 
 > **Note:** The full NP-002 fairness monitoring framework will be finalised following completion of the Q4 2026 bias review. The metrics above represent the interim approach. Baselines and refined thresholds will be defined in a document update upon review completion.
 
@@ -100,9 +100,9 @@ Post-deployment monitoring serves four objectives for both systems:
 | Automated metric dashboard refresh | Daily | IT and AGPO (automated) | Dashboard accessible to system owners and AGPO |
 | Override rate review (NP-001) | Monthly | Head of Credit Risk | Escalation to AGPO if threshold triggered |
 | False positive rate review (NP-002) | Monthly | Head of Financial Crime | Escalation to AGPO if threshold triggered |
-| Fairness analysis — both systems | Quarterly | AGPO and ML Engineering | Included in quarterly AI Governance Committee report |
-| Full performance report — both systems | Quarterly | AGPO | Report to AI Governance Committee |
-| Annual system review — both systems | Annual | AGPO | Full review; continuation decision |
+| Fairness analysis - both systems | Quarterly | AGPO and ML Engineering | Included in quarterly AI Governance Committee report |
+| Full performance report - both systems | Quarterly | AGPO | Report to AI Governance Committee |
+| Annual system review - both systems | Annual | AGPO | Full review; continuation decision |
 
 ---
 
@@ -113,7 +113,7 @@ If post-deployment monitoring detects a potential serious incident, the followin
 ```
 [Detection] Metric alert triggered or complaint received
      ↓
-[AGPO triage] Is this a potential serious incident? — within 24h
+[AGPO triage] Is this a potential serious incident? - within 24h
      ↓
 No → Document finding; increase monitoring frequency for affected metric
      ↓
@@ -123,7 +123,7 @@ Yes → Initiate AI Incident Response per Phase 4 procedure
      ↓
      CRO notified within 24h
      ↓
-     Assess regulatory reporting obligation — EU AI Act Article 73, FCA, ICO
+     Assess regulatory reporting obligation - EU AI Act Article 73, FCA, ICO
      ↓
      Containment, investigation and remediation
 ```
@@ -134,18 +134,18 @@ Performance monitoring is the primary mechanism by which serious incidents are d
 
 ## 7. Annual System Review
 
-At the 12-month mark from deployment of each version — July 2027 for both systems under this documentation version — AGPO will conduct a full annual review covering:
+At the 12-month mark from deployment of each version - July 2027 for both systems under this documentation version - AGPO will conduct a full annual review covering:
 
 1. Performance summary against all metrics in this plan
 2. Fairness analysis summary
 3. Incident log review
-4. Oversight quality assessment — override rates, review time, challenge rates
-5. Regulatory change assessment — any new obligations that affect either system
+4. Oversight quality assessment - override rates, review time, challenge rates
+5. Regulatory change assessment - any new obligations that affect either system
 6. Recommendation: continue as-is / modify controls / decommission
 
 The annual review is presented to the AI Governance Committee. Continuation in production is conditional on a satisfactory review and committee sign-off.
 
-All monitoring outputs — dashboards, quarterly reports, annual reviews, incident records and revalidation findings — are retained for 7 years in the AI Governance Programme Office documentation archive and are available for regulatory inspection.
+All monitoring outputs - dashboards, quarterly reports, annual reviews, incident records and revalidation findings - are retained for 7 years in the AI Governance Programme Office documentation archive and are available for regulatory inspection.
 
 ---
 
