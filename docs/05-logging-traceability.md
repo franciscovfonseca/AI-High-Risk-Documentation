@@ -1,9 +1,9 @@
 # Document 5: Logging and Traceability
 
-**Systems:** NP-001 Credit Scoring Engine · NP-002 Fraud Detection System
-**EU AI Act Reference:** Article 12 (Record-Keeping)
-**Version:** 1.0 — July 2026
-**Prepared by:** AI Governance Programme Office and Information Security
+**Systems:** NP-001 Credit Scoring Engine · NP-002 Fraud Detection System  
+**EU AI Act Reference:** Article 12 (Record-Keeping)  
+**Version:** 1.0 - July 2026  
+**Prepared by:** AI Governance Programme Office and Information Security  
 
 ---
 
@@ -19,7 +19,7 @@ This document describes the logging architecture for NP-001 and NP-002.
 
 ## 2. Events Logged
 
-### NP-001 — Credit Scoring Engine
+### NP-001 - Credit Scoring Engine
 
 | Event Category | Specific Events |
 |---|---|
@@ -28,11 +28,11 @@ This document describes the logging architecture for NP-001 and NP-002.
 | **Underwriter actions** | Review initiated; reviewer ID; decision recorded; override indicator; override reason text; decision timestamp; time spent on review |
 | **Customer communications** | Communication type (approval/decline); timestamp; communication reference |
 | **Overrides** | Override initiated; original AI recommendation; revised decision; reason text; reviewer ID |
-| **Model version** | Version number at time of each inference — enables correlation of decisions to specific model releases |
+| **Model version** | Version number at time of each inference - enables correlation of decisions to specific model releases |
 | **System exceptions** | Low-confidence flag triggered; input validation failures; credit bureau query failures; system errors |
 | **Access and authentication** | User login and logout; role; session duration |
 
-### NP-002 — Fraud Detection System
+### NP-002 - Fraud Detection System
 
 | Event Category | Specific Events |
 |---|---|
@@ -65,7 +65,7 @@ This document describes the logging architecture for NP-001 and NP-002.
 |---|---|
 | Log immutability | Append-only storage; modification requires CISO-level approval and creates an audit entry |
 | Encryption at rest | AES-256 for all stored logs |
-| Hash-chaining | Applied to model output and decision log entries — enables tamper detection |
+| Hash-chaining | Applied to model output and decision log entries - enables tamper detection |
 | Access audit | All log access events are themselves logged with user ID and timestamp |
 | Backup | Daily backup to a geographically separate UK data centre |
 | Regulatory access | Full log set can be produced for regulatory inspection within 24 hours of a formal request |
@@ -85,7 +85,7 @@ Applicant X submits application [timestamp]
     [inference timestamp]
   → Underwriter A reviews for 9 minutes [timestamp]
   → Override: underwriter declines application
-    Reason: "Significant recent credit enquiries not reflected in bureau snapshot — likely
+    Reason: "Significant recent credit enquiries not reflected in bureau snapshot - likely
     undisclosed liabilities pending settlement. Manual review confirmed."
   → Decline communication sent with GDPR Article 22 notice [timestamp]
   → Log entry: override recorded, reason stored, reviewer ID recorded
@@ -102,10 +102,10 @@ For any held transaction, the full event chain is recoverable:
 ```
 Transaction T processed [timestamp]
   → NP-002 v1.4 generates: score 91, flag, reason: "Unusual merchant category +
-    geographic anomaly — transaction location inconsistent with 90-day customer pattern"
+    geographic anomaly - transaction location inconsistent with 90-day customer pattern"
   → Automatic hold applied; customer notified via app and SMS [timestamp]
   → Fraud Analyst B reviews for 14 minutes [timestamp]
-  → Hold cleared: "Contacted customer — confirmed overseas travel. Transaction verified
+  → Hold cleared: "Contacted customer - confirmed overseas travel. Transaction verified
     as legitimate. Customer account flagged for travel window."
   → Transaction released; customer notified [timestamp]
 ```
@@ -127,14 +127,14 @@ Following a potential bias incident, the log structure enables:
 
 ## 5. Log Review and Active Monitoring
 
-Logs are actively monitored — not merely stored — as part of the ongoing governance of both systems.
+Logs are actively monitored - not merely stored - as part of the ongoing governance of both systems.
 
 | Activity | Frequency | Owner |
 |---|---|---|
 | Override rate monitoring (NP-001) | Monthly | Head of Credit Risk |
 | False positive rate monitoring (NP-002) | Monthly | Head of Financial Crime |
-| Review time analysis — oversight effectiveness (both) | Monthly | AGPO |
-| Demographic parity analysis — proxy group outcomes (both) | Quarterly | AGPO and ML Engineering |
+| Review time analysis - oversight effectiveness (both) | Monthly | AGPO |
+| Demographic parity analysis - proxy group outcomes (both) | Quarterly | AGPO and ML Engineering |
 | Access audit review | Quarterly | Information Security |
 | Full log audit | Annual | Internal Audit |
 
